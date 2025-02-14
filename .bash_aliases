@@ -2,8 +2,8 @@
 # GERENCIAMENTO DE ALIASES
 # ==============================================
 alias alias-config='sudo nano ~/.bash_aliases'                  # Edita o arquivo de aliases
-alias reload-bash='source ~/.bashrc'				            # Recarrega o bash
-alias alias-list='cat ~/.bash_aliases'            	            # Exibe os aliases configurados
+alias reload-bash='source ~/.bashrc'                            # Recarrega o bash
+alias alias-list='cat ~/.bash_aliases'                          # Exibe os aliases configurados
 
 # ==============================================
 # NAVEGAÇÃO E GERENCIAMENTO DE ARQUIVOS
