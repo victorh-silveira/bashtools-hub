@@ -2,7 +2,7 @@
 # GERENCIAMENTO DE ALIASES
 # ==============================================
 alias alias-config='sudo nano ~/.bash_aliases'                  # Edita o arquivo de aliases
-alias reload-bash='source ~/.bashrc'				                    # Recarrega o bash
+alias reload-bash='source ~/.bashrc'				            # Recarrega o bash
 alias alias-list='cat ~/.bash_aliases'            	            # Exibe os aliases configurados
 
 # ==============================================
@@ -106,3 +106,6 @@ alias grype='grype'                                             # Escaneia vulne
 alias tfsec='tfsec .'                                           # Analisa segurança de configurações Terraform
 alias helm-lint='helm lint'                                     # Lint para charts Helm
 alias kscan='kubectl krew install kscan'                        # Scanner de segurança para clusters Kubernetes
+
+
+
