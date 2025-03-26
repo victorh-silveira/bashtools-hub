@@ -1,9 +1,9 @@
 # ==============================================
 # GERENCIAMENTO DE ALIASES
 # ==============================================
-alias alias-config='sudo nano ~/.bash_aliases'                  # Edita o arquivo de aliases
-alias reload-bash='source ~/.bashrc'                            # Recarrega o bash
-alias alias-list='cat ~/.bash_aliases'                          # Exibe os aliases configurados
+alias alias-config='sudo nano ~/.bash_aliases'			# Edita o arquivo de aliases
+alias reload-bash='source ~/.bashrc'				# Recarrega o bash
+alias alias-list='cat ~/.bash_aliases'				# Exibe os aliases configurados
 
 # ==============================================
 # NAVEGAÇÃO E GERENCIAMENTO DE ARQUIVOS
@@ -12,10 +12,9 @@ alias ll='ls -lha --color=auto'                                 # Listagem detal
 alias lc='ls -CF --color=auto'                                  # Listagem com diretórios destacados
 alias ..='cd ..'                                                # Sobe um nível no diretório
 alias ...='cd ../..'                                            # Sobe dois níveis no diretório
-alias ~='cd ~'                                                  # Vai para o diretório home
-alias cl='clear'                                                # Limpa a tela
+alias home='cd ~'                                               # Vai para o diretório home
+alias cls='clear'                                               # Limpa a tela
 
-# Proteção contra sobrescrita/exclusão acidental
 alias mv='mv -i'                                                # Move com confirmação
 alias cp='cp -i'                                                # Copia com confirmação
 alias rm='rm -i'                                                # Remove com confirmação
@@ -83,6 +82,9 @@ alias docker-rm='docker rm'                                     # Remove contain
 alias docker-rmi='docker rmi'                                   # Remove imagem
 alias docker-logs='docker logs -f'                              # Exibe logs de container
 alias docker-prune='docker system prune -f'                     # Remove recursos não utilizados
+alias docker-stop-all='docker stop $(docker ps -aq)'		# Para todos os containers em execucao
+alias docker-remove-all='docker rm $(docker ps -aq)'		# Remove todos os containers
+alias docker-remove-images='docker rmi -f $(docker images -aq)'	# Remove todas as imagens Docker
 
 # ==============================================
 # KUBERNETES
@@ -107,5 +109,38 @@ alias tfsec='tfsec .'                                           # Analisa segura
 alias helm-lint='helm lint'                                     # Lint para charts Helm
 alias kscan='kubectl krew install kscan'                        # Scanner de segurança para clusters Kubernetes
 
+# ==============================================
+# GITHUB
+# ==============================================
+alias git-pessoal='cd /home/victor-silveira/Documentos/github-pessoal' 
+alias git-granto='cd /home/victor-silveira/Documentos/github-granto'
 
-
+# ==============================================
+# MICROSOFT AZURE
+# ==============================================
+alias az-reg-granto="az acr login --name granto"                # Login no Container Registry granto
+alias az-reg-grantodev="az acr login --name grantoDev"          # Login no Container Registry grantoDev
+alias az-login="az login"                                       # Login na conta Azure
+alias az-logout="az logout"                                     # Logout da conta Azure
+alias az-account="az account show"                              # Exibe conta/subscription ativa
+alias az-set-sub="az account set --subscription"                # Define subscription ativa
+alias az-rg-list="az group list -o table"                       # Lista Resource Groups
+alias az-acr-list="az acr list -o table"                        # Lista Container Registries
+alias az-aks-list="az aks list -o table"                        # Lista clusters AKS
+alias az-vm-list="az vm list -o table"                          # Lista máquinas virtuais
+alias az-aks-creds="az aks get-credentials --resource-group"    # Obtém credenciais de acesso ao AKS
+alias az-aks-ns="kubectl get namespaces"                        # Lista namespaces do cluster
+alias az-k="kubectl"                                            # Atalho para kubectl
+alias az-kpods="kubectl get pods -A"                            # Lista todos os pods em todos os namespaces
+alias az-kctx="kubectl config current-context"                  # Mostra o contexto atual do kubectl
+alias az-acr-repos="az acr repository list --name"              # Lista repositórios dentro de um ACR
+alias az-acr-tags="az acr repository show-tags --name"          # Lista tags de uma imagem no ACR
+alias az-acr-purge="az acr repository delete --name"            # Remove repositório ou tag do ACR
+alias az-storage-list="az storage account list -o table"        # Lista contas de armazenamento
+alias az-func-list="az functionapp list -o table"               # Lista Azure Function Apps
+alias az-app-list="az webapp list -o table"                     # Lista Web Apps (App Services)
+alias az-deploy="az deployment group create"                    # Cria deployment em um resource group
+alias az-bicep-build="az bicep build --file"                    # Compila arquivo Bicep para ARM
+alias az-monitor-logs="az monitor log-analytics query --workspace" # Executa query em Log Analytics
+alias az-ssh="az ssh vm"                                        # Conecta via SSH a uma VM do Azure
+alias az-help="az --help"                                       # Mostra ajuda da CLI Azure
