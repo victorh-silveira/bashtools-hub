@@ -18,6 +18,7 @@ alias cls='clear'                                               # Limpa a tela
 alias mv='mv -i'                                                # Move com confirmação
 alias cp='cp -i'                                                # Copia com confirmação
 alias rm='rm -i'                                                # Remove com confirmação
+alias copy='xclip -selection clipboard'				# Copia a saida de um comando para a área de trasferência
 
 # ==============================================
 # ATUALIZAÇÃO E GERENCIAMENTO DE PACOTES (PACMAN/YAY)
@@ -117,8 +118,8 @@ alias kscan='kubectl krew install kscan'                        # Scanner de seg
 # ==============================================
 # GITHUB
 # ==============================================
-alias git-pessoal='cd /home/victor-silveira/Documentos/GitHub' 
-alias git-granto='cd /home/victor-silveira/Documentos/GitHub'
+alias git-pessoal='cd /home/victor-silveira/Work/GitHub' 
+alias git-granto='cd /home/victor-silveira/Work/GitHub'
 
 # ==============================================
 # MICROSOFT AZURE
