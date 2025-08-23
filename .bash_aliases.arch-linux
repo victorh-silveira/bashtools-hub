@@ -54,7 +54,7 @@ alias routes='ip r'                                             # Tabela de rote
 alias ports='sudo ss -tulanp'                                   # Portas abertas com processos
 alias ping='ping -c 5'                                          # Envia 5 pacotes de ping
 alias fastping='ping -c 100 -i 0.2'                             # Pings rápidos
-alias myip='curl -s ifconfig.me'                                # Mostra IP público
+alias myip='curl 'https://api.ipify.org?format=json''           # Mostra IP público
 alias dhcprenew='sudo dhclient'                                 # Renova DHCP
 alias dhcprelease='sudo dhclient -r'                            # Libera DHCP
 
@@ -108,7 +108,7 @@ alias kuber-logs='kubectl logs -f'                              # Exibe logs de 
 # ==============================================
 # DEVSECOPS
 # ==============================================
-alias trivy="trivy image --severity HIGH,CRITICAL --ignore-unfixed" # Escaneia vulnerabilidades de imagem Docker
+alias trivy="trivy image --severity CRITICAL,HIGH,MEDIUM,LOW  --ignore-unfixed" # Escaneia vulnerabilidades de imagem Docker
 alias checkov='checkov -d .'                                    # Escaneia infraestrutura como código
 alias grype='grype'                                             # Escaneia vulnerabilidades em imagens
 alias tfsec='tfsec .'                                           # Analisa segurança de configurações Terraform
@@ -118,8 +118,8 @@ alias kscan='kubectl krew install kscan'                        # Scanner de seg
 # ==============================================
 # GITHUB
 # ==============================================
-alias git-pessoal='cd /home/victor-silveira/Work/GitHub' 
-alias git-granto='cd /home/victor-silveira/Work/GitHub'
+
+alias github='cd /home/victor-silveira/Work/GitHub'
 
 # ==============================================
 # MICROSOFT AZURE
